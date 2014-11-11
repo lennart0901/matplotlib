@@ -212,6 +212,9 @@ original location:
 
 * The default clip value of *all* pie artists now defaults to ``False``.
 
+* The `matplotlib.cbook.ls_mapper` dictionary is split into two now.
+  `ls_mapper` now maps from the short symbols (e.g. `"--"`) to qualified names
+  (`"solid"`). The new ls_mapper_r is the reversed mapping.
 
 Code removal
 ------------
