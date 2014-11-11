@@ -688,7 +688,6 @@ class Line2D(Artist):
         gc.set_antialiased(self._antialiased)
         gc.set_linewidth(self._linewidth)
 
-        print(self.is_dashed(), self.get_xdata())
         if self.is_dashed():
             cap = self._dashcapstyle
             join = self._dashjoinstyle
@@ -972,7 +971,7 @@ class Line2D(Artist):
                 break
 
         linestyle = ls_mapper.get(linestyle, linestyle)
-        if linestyle in [' ', '']:
+        if linestyle.lower() in [' ', '', 'none']:
             linestyle = 'None'
         self._linestyle = linestyle
 
